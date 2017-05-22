@@ -6,13 +6,19 @@ comments: false
 
 #### Introduction
 
-I am Robbert-Jan 't Hoen. My motivation for building this website is threefold:
+My motivation for building this website is threefold:
 
 - To track my progress
 - To later on remember me of past endeavours
 - To motivate/inspire/help others
 
+<br>
+
 #### Getting to know me
+
+My name is Robbert-Jan 't Hoen. I am a 22 year old student living in the neighbourhood of Rotterdam, the Netherlands. 
+
+<br>
 
 #### Resume
 

@@ -8,7 +8,7 @@ I am Robbert-Jan 't Hoen. My motivation for building this website is threefold:
 
 - To track my progress
 - To later on remember me of past endeavours
-- To motivate/inspire/help other people
+- To motivate/inspire/help others
 
 ### My background
 

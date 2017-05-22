@@ -10,15 +10,12 @@ My motivation for building this website is threefold:
 
 - To track my progress
 - To later on remember me of past endeavours
-- To motivate/inspire/help others
-
-<br>
+- To motivate/inspire/help others   
 
 #### Getting to know me
 
-My name is Robbert-Jan 't Hoen, and I am a 22 year old student living in the neighbourhood of Rotterdam, the Netherlands. 
+My name is Robbert-Jan 't Hoen, and I am a 22 year old student living in the neighbourhood of Rotterdam, the Netherlands.   
 
-<br>
 
 #### Resume
 

@@ -5,9 +5,7 @@ tags: [development, hugo, blogdown, github]
 title: "Fist blog post"
 ---
 
-And as (almost) always, after a few days of troubleshooting I have finally been able to launch my new website! 
-
-<br>
+And finally, after a few days of frequent troubleshooting, I have been able to launch my new website! 
 
 Some additional math:
 

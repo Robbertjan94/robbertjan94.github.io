@@ -16,7 +16,7 @@ My motivation for building this website is threefold:
 
 #### Getting to know me
 
-My name is Robbert-Jan 't Hoen. I am a 22 year old student living in the neighbourhood of Rotterdam, the Netherlands. 
+My name is Robbert-Jan 't Hoen, and I am a 22 year old student living in the neighbourhood of Rotterdam, the Netherlands. 
 
 <br>
 

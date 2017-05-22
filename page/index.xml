@@ -12,24 +12,15 @@
     
     
     <item>
-      <title></title>
-      <link>https://robbertjan94.github.io/page/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>youremail@domain.com (Robbert-Jan &#39;t Hoen)</author>
-      <guid>https://robbertjan94.github.io/page/about/</guid>
-      <description>About me       code{white-space: pre;} pre:not([class]) { background-color: white; }  if (window.hljs &amp;&amp; document.readyState &amp;&amp; document.readyState === &#34;complete&#34;) { window.setTimeout(function() { hljs.initHighlighting(); }, 0); }  h1 { font-size: 34px; } h1.title { font-size: 38px; } h2 { font-size: 30px; } h3 { font-size: 24px; } h4 { font-size: 18px; } h5 { font-size: 16px; } h6 { font-size: 12px; } .table th:not([align]) { text-align: left; }    .</description>
-    </item>
-    
-    <item>
       <title>About me</title>
-      <link>https://robbertjan94.github.io/page/about/</link>
+      <link>https://robbertjan94.github.io/page/about_me/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Robbert-Jan &#39;t Hoen)</author>
-      <guid>https://robbertjan94.github.io/page/about/</guid>
+      <guid>https://robbertjan94.github.io/page/about_me/</guid>
       <description>Introduction My motivation for building this website is threefold:
- To track my progress To later on remember me of past endeavours To motivate/inspire/help others
-  Getting to know me My name is Robbert-Jan &amp;rsquo;t Hoen, and I am a 22 year old student living in the neighbourhood of Rotterdam, the Netherlands.
-Resume Click here for my resume.</description>
+ To track my progress To later on remember me of past endeavours To motivate/inspire/help others   Getting to know me My name is Robbert-Jan ’t Hoen, and I am a 22 year old student living in the neighbourhood of Rotterdam, the Netherlands.
+ Resume Click here for my resume.
+ </description>
     </item>
     
   </channel>

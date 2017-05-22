@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogdown on Robbert-Jan &#39;t Hoen</title>
+    <link>/https://robbertjan94.github.io/tags/blogdown/</link>
+    <description>Recent content in Blogdown on Robbert-Jan &#39;t Hoen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>youremail@domain.com (Robbert-Jan &#39;t Hoen)</managingEditor>
+    <webMaster>youremail@domain.com (Robbert-Jan &#39;t Hoen)</webMaster>
+    <lastBuildDate>Mon, 22 May 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/https://robbertjan94.github.io/tags/blogdown/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Fist blog post</title>
+      <link>/https://robbertjan94.github.io/blog/test_post/</link>
+      <pubDate>Mon, 22 May 2017 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Robbert-Jan &#39;t Hoen)</author>
+      <guid>/https://robbertjan94.github.io/blog/test_post/</guid>
+      <description>And as (almost) always, after a few days of troubleshooting I have finally been able to launch my new website!
+
+Some additional math:
+\[ \max_x \text{ } \sum_{i=1}^N w_i x_i \] \[ \sum_{i=1}^N w_i = 1\]</description>
+    </item>
+    
+  </channel>
+</rss>

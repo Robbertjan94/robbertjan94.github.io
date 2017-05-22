@@ -6,7 +6,7 @@ comments: false
 
 My name is Robbert-Jan 't Hoen. I built this website for three reasons:
 
-- To track my progression
+- To track my progress
 - To later on remember me of past endeavours
 - To motivate/inspire/help other people
 

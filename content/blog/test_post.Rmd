@@ -1,6 +1,5 @@
 ---
-categories: []
-date: 2017-05-22T19:42:55+02:00
+date: 2017-05-22
 description: "This is a test post"
 tags: []
 title: "Test post"

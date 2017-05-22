@@ -55,6 +55,6 @@ pygmentCodeFences = true
 
 [[menu.main]]
     name = "About"
-    url = "page/about"
+    url = "page/about_me/"
     weight = 3
 

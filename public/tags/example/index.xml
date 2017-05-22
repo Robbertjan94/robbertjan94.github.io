@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Example on Robbert-Jan &#39;t Hoen</title>
-    <link>https://robbertian94.github.io/tags/example/</link>
+    <link>https://robbertjan94.github.io/tags/example/</link>
     <description>Recent content in Example on Robbert-Jan &#39;t Hoen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Mon, 20 Mar 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://robbertian94.github.io/tags/example/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://robbertjan94.github.io/tags/example/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Photoswipe Gallery Sample</title>
-      <link>https://robbertian94.github.io/2017/03/20/photoswipe-gallery-sample/</link>
+      <link>https://robbertjan94.github.io/2017/03/20/photoswipe-gallery-sample/</link>
       <pubDate>Mon, 20 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://robbertian94.github.io/2017/03/20/photoswipe-gallery-sample/</guid>
+      <guid>https://robbertjan94.github.io/2017/03/20/photoswipe-gallery-sample/</guid>
       <description>Beautiful Hugo adds a few custom shortcodes created by Li-Wen Yip and Gert-Jan van den Berg for making galleries with PhotoSwipe .</description>
     </item>
     
     <item>
       <title>Big Image Sample</title>
-      <link>https://robbertian94.github.io/2017/03/07/big-image-sample/</link>
+      <link>https://robbertjan94.github.io/2017/03/07/big-image-sample/</link>
       <pubDate>Tue, 07 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://robbertian94.github.io/2017/03/07/big-image-sample/</guid>
+      <guid>https://robbertjan94.github.io/2017/03/07/big-image-sample/</guid>
       <description>&lt;p&gt;The image banners at the top of the page are refered to as &amp;ldquo;bigimg&amp;rdquo; in this theme. They are optional, and one more more can be specified. If more than one is specified, the images rotate every 10 seconds. In the front matter, bigimgs are specified using an array of hashes.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -33,10 +33,10 @@
     
     <item>
       <title>Math Sample</title>
-      <link>https://robbertian94.github.io/2017/03/05/math-sample/</link>
+      <link>https://robbertjan94.github.io/2017/03/05/math-sample/</link>
       <pubDate>Sun, 05 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://robbertian94.github.io/2017/03/05/math-sample/</guid>
+      <guid>https://robbertjan94.github.io/2017/03/05/math-sample/</guid>
       <description>&lt;p&gt;KaTeX can be used to generate complex math formulas server-side.&lt;/p&gt;
 
 &lt;p&gt;$$
@@ -49,10 +49,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>Code Sample</title>
-      <link>https://robbertian94.github.io/2016/03/08/code-sample/</link>
+      <link>https://robbertjan94.github.io/2016/03/08/code-sample/</link>
       <pubDate>Tue, 08 Mar 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://robbertian94.github.io/2016/03/08/code-sample/</guid>
+      <guid>https://robbertjan94.github.io/2016/03/08/code-sample/</guid>
       <description>&lt;p&gt;The following are two code samples using syntax highlighting.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -60,10 +60,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>Test markdown</title>
-      <link>https://robbertian94.github.io/2015/02/20/test-markdown/</link>
+      <link>https://robbertjan94.github.io/2015/02/20/test-markdown/</link>
       <pubDate>Fri, 20 Feb 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://robbertian94.github.io/2015/02/20/test-markdown/</guid>
+      <guid>https://robbertjan94.github.io/2015/02/20/test-markdown/</guid>
       <description>You can write regular markdown here and Jekyll will automatically convert it to a nice webpage. I strongly encourage you to take 5 minutes to learn how to write in markdown - it&amp;rsquo;ll teach you how to transform regular text into bold/italics/headings/tables/etc.
 Here is some bold text
 Here is a secondary heading Here&amp;rsquo;s a useless table:

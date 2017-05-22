@@ -8,3 +8,6 @@ title: "Test post"
 
 # Does this work?
 
+$$ \max_x \text{ } \sum_{i=1}^N w_i x_i $$
+$$ \sum_{i=1}^N w_i = 1$$
+

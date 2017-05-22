@@ -11,4 +11,4 @@ Some additional math:
 
 $$ \max_x \text{ } \sum_{i=1}^N w_i x_i $$
 $$ \sum_{i=1}^N w_i = 1$$
-
+$$ f(x) = \frac{\pi}{6} - \sin(2 \pi)$$

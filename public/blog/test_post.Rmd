@@ -1,11 +1,15 @@
 ---
 date: 2017-05-22
-description: "This is a test post"
-tags: []
-title: "Test post"
+description: "In this first blog post I describe my setup"
+tags: [website setup]
+title: "Fist blog post"
 ---
 
-# Does this work?
+And as (almost) always, after a few days of troubleshooting I have finally been able to launch my new website! 
+
+<br>
+
+Some additional math:
 
 $$ \max_x \text{ } \sum_{i=1}^N w_i x_i $$
 $$ \sum_{i=1}^N w_i = 1$$

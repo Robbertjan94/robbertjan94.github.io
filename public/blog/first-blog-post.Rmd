@@ -6,5 +6,3 @@ title: "Fist blog post"
 ---
 
 Finally, after a few days of troubleshooting, I have succeeded in launching my first website with <a href="https://gohugo.io/">Hugo</a>! 
-
-{{ partial "disqus.html" . }}

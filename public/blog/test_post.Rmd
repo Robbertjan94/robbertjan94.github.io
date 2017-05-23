@@ -5,10 +5,4 @@ tags: [development, hugo, blogdown, github]
 title: "Fist blog post"
 ---
 
-And finally, after a few days of frequent troubleshooting, I have been able to launch my new website! 
-
-Some additional math:
-
-$$ \max_x \text{ } \sum_{i=1}^N w_i x_i $$
-$$ \sum_{i=1}^N w_i = 1$$
-$$ f(x) = \frac{\pi}{6} - \sin(2 \pi)$$
+And finally, after a few days of troubleshooting, I have succeeded in launching my first website! 

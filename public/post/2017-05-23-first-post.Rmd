@@ -9,4 +9,4 @@ subtitle: ''
 bigimg: [{src: "/img/sun.jpg"}]
 ---
 
-This is my first post, it will later on include a big image as an header.
+Let there be ligth!

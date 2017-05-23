@@ -10,8 +10,9 @@ My motivation for building this website is threefold:
 
 - To track my progress
 - To later on remember me of past endeavours
-- To motivate/inspire/help others     
-     
+- To motivate/inspire/help others
+
+<hr style="height:0px; visibility:hidden;" />
 
 #### Getting to know me
 

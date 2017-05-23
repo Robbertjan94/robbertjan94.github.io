@@ -9,4 +9,4 @@ subtitle: ''
 bigimg: [{src: "/img/sun.jpg"}]
 ---
 
-Let there be ligth!
+And let there be ligth!

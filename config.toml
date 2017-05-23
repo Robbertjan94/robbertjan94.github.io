@@ -6,7 +6,7 @@ theme = "beautifulhugo"
 metaDataFormat = "yaml"
 pygmentsUseClasses = true
 pygmentCodeFences = true
-disqusShortname = "robbertjan94.github.io"
+disqusShortname = "robbertjan94-github-io"
 #googleAnalytics = "XXX"
 
 [Params]

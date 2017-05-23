@@ -18,7 +18,8 @@
       <pubDate>Mon, 22 May 2017 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Robbert-Jan &#39;t Hoen)</author>
       <guid>https://robbertjan94.github.io/blog/first-blog-post/</guid>
-      <description>And finally, after a few days of troubleshooting, I have succeeded in launching my first website with Hugo!</description>
+      <description>Finally, after a few days of troubleshooting, I have succeeded in launching my first website with Hugo!
+{{ partial “disqus.html” . }}</description>
     </item>
     
     <item>

@@ -2,23 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Github on Robbert-Jan &#39;t Hoen</title>
-    <link>https://robbertjan94.github.io/tags/github/</link>
+    <link>/tags/github/</link>
     <description>Recent content in Github on Robbert-Jan &#39;t Hoen</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>robbertjan-1994@hotmail.com (Robbert-Jan &#39;t Hoen)</managingEditor>
     <webMaster>robbertjan-1994@hotmail.com (Robbert-Jan &#39;t Hoen)</webMaster>
     <lastBuildDate>Mon, 22 May 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://robbertjan94.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/github/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Fist blog post</title>
-      <link>https://robbertjan94.github.io/blog/first-blog-post/</link>
+      <link>/blog/first-blog-post/</link>
       <pubDate>Mon, 22 May 2017 00:00:00 +0000</pubDate>
       <author>robbertjan-1994@hotmail.com (Robbert-Jan &#39;t Hoen)</author>
-      <guid>https://robbertjan94.github.io/blog/first-blog-post/</guid>
-      <description>Finally, after a few days of troubleshooting, I have succeeded in launching my first website with Hugo!</description>
+      <guid>/blog/first-blog-post/</guid>
+      <description>Finally, after a few days of troubleshooting, I have succeeded in launching my first website with Hugo!
+My current setup is GitHub Pages + Hugo + Blogdown as described in this excellent tutorial by Amber Thomas. This allows me to create rich web content by utilizing Rmarkdown files with the blogdown package in Rstudio. I chose to use Hugo because it produces static websites. The idea of a static website is that websites are viewed far more often than they are edited, hence the building is only done when the content is created1.</description>
     </item>
     
   </channel>

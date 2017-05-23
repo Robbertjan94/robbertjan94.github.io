@@ -14,7 +14,7 @@ disqusShortname = "robbertjan94-github-io"
   favicon = "img/favicon_rj.ico"
   dateFormat = "January 2, 2006"
   commit = false
-  rss = true
+  rss = false
   comments = true
 #  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
 
@@ -30,12 +30,11 @@ disqusShortname = "robbertjan94-github-io"
 
 [Author]
   name = "Robbert-Jan 't Hoen"
-  email = "youremail@domain.com"
-  github = "username"
-  twitter = "username"
-  linkedin = "username"
-  instagram = "username"
-  spotify = "username"
+  email = "robbertjan-1994@hotmail.com"
+  github = "robbertjan94"
+  linkedin = "robbert-jan-t-hoen-b8930399"
+  instagram = "robbertjan94"
+  spotify = "1154803600"
 
 [[menu.main]]
     name = "Blog"

@@ -2,58 +2,58 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Robbert-Jan &#39;t Hoen</title>
-    <link>/</link>
+    <link>https://robbertjan94.github.io/</link>
     <description>Recent content on Robbert-Jan &#39;t Hoen</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>robbertjan-1994@hotmail.com (Robbert-Jan &#39;t Hoen)</managingEditor>
     <webMaster>robbertjan-1994@hotmail.com (Robbert-Jan &#39;t Hoen)</webMaster>
     <lastBuildDate>Tue, 23 May 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://robbertjan94.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>First post</title>
-      <link>/post/first-post/</link>
+      <link>https://robbertjan94.github.io/post/first-post/</link>
       <pubDate>Tue, 23 May 2017 00:00:00 +0000</pubDate>
       <author>robbertjan-1994@hotmail.com (Robbert-Jan &#39;t Hoen)</author>
-      <guid>/post/first-post/</guid>
+      <guid>https://robbertjan94.github.io/post/first-post/</guid>
       <description>This is my first post, it will later on include a big image as an header.</description>
     </item>
     
     <item>
       <title>Fist blog post</title>
-      <link>/blog/first-blog-post/</link>
+      <link>https://robbertjan94.github.io/blog/first-blog-post/</link>
       <pubDate>Mon, 22 May 2017 00:00:00 +0000</pubDate>
       <author>robbertjan-1994@hotmail.com (Robbert-Jan &#39;t Hoen)</author>
-      <guid>/blog/first-blog-post/</guid>
+      <guid>https://robbertjan94.github.io/blog/first-blog-post/</guid>
       <description>Finally, after a few days of troubleshooting, I have succeeded in launching my first website with Hugo!</description>
     </item>
     
     <item>
       <title>Projects</title>
-      <link>/projects/</link>
+      <link>https://robbertjan94.github.io/projects/</link>
       <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
       <author>robbertjan-1994@hotmail.com (Robbert-Jan &#39;t Hoen)</author>
-      <guid>/projects/</guid>
+      <guid>https://robbertjan94.github.io/projects/</guid>
       <description></description>
     </item>
     
     <item>
       <title>About</title>
-      <link>/about/</link>
+      <link>https://robbertjan94.github.io/about/</link>
       <pubDate>Thu, 05 May 2016 21:48:51 -0700</pubDate>
       <author>robbertjan-1994@hotmail.com (Robbert-Jan &#39;t Hoen)</author>
-      <guid>/about/</guid>
+      <guid>https://robbertjan94.github.io/about/</guid>
       <description>This is a &amp;ldquo;hello world&amp;rdquo; example website for the blogdown package. The theme was forked from @jrutheiser/hugo-lithium-theme and modified by Yihui Xie.</description>
     </item>
     
     <item>
       <title>About me</title>
-      <link>/page/about_me/</link>
+      <link>https://robbertjan94.github.io/page/about_me/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>robbertjan-1994@hotmail.com (Robbert-Jan &#39;t Hoen)</author>
-      <guid>/page/about_me/</guid>
+      <guid>https://robbertjan94.github.io/page/about_me/</guid>
       <description>Introduction My motivation for building this website is threefold:
  To track my progress To later on remember me of past endeavours To motivate/inspire/help others   Getting to know me I am Robbert-Jan ’t Hoen, a 22 year old student living in the neighbourhood of Rotterdam, the Netherlands.
  Resume Click here for my resume.

@@ -7,7 +7,7 @@ metaDataFormat = "yaml"
 pygmentsUseClasses = true
 pygmentCodeFences = true
 disqusShortname = "robbertjan94-github-io"
-#googleAnalytics = "XXX"
+googleAnalytics = "UA-99839400-1"
 
 [Params]
   subtitle = "Technology excites"

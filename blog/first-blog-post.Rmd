@@ -1,5 +1,5 @@
 ---
-date: 2017-05-28
+date: '2017-05-28'
 description: "In this first blog post I describe my setup"
 tags: [development, hugo, blogdown, github]
 title: "Fist blog post"

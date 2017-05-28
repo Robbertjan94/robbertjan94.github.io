@@ -1,8 +1,8 @@
 ---
+title: First blog post
 date: '2017-05-28'
 description: "In this first blog post I describe my setup"
 tags: [development, hugo, blogdown, github]
-title: "Fist blog post"
 ---
 
 And after a few days of troubleshooting, I have finally succeeded in launching my first website with <a href="https://gohugo.io/">Hugo</a>, hurray!

@@ -2,32 +2,22 @@ baseurl = "https://robbertjan94.github.io/"
 DefaultContentLanguage = "en"
 #DefaultContentLanguage = "ja"
 title = "Robbert-Jan 't Hoen"
-theme = "beautifulhugo"
+theme = "hugo-lithium-theme"
 metaDataFormat = "yaml"
 pygmentsUseClasses = true
 pygmentCodeFences = true
 disqusShortname = "robbertjan94-github-io"
 googleAnalytics = "UA-99839400-1"
 
-[Params]
-  subtitle = "Technology excites"
-  favicon = "img/favicon_rj.ico"
-  dateFormat = "January 2, 2006"
-  commit = false
-  rss = false
-  comments = true
-#  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
+[params]
+    description = ""
 
-#[[Params.bigimg]]
-#  src = "img/triangle.jpg"
-#  desc = "Triangle"
-#[[Params.bigimg]]
-#  src = "img/sphere.jpg"
-#  desc = "Sphere"
-#[[Params.bigimg]]
-#  src = "img/hexagon.jpg"
-#  desc = "Hexagon"
-
+    [params.logo]
+    url = "logo.png"
+    width = 50
+    height = 50
+    alt = "Logo"
+    
 [Author]
   name = "Robbert-Jan 't Hoen"
   email = "robbertjan-1994@hotmail.com"

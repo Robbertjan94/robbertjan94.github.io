@@ -6,7 +6,9 @@ slug: first-post
 categories: []
 tags: [meta]
 subtitle: ''
-bigimg: [{src: "/img/sun.jpg"}]
 ---
 
+<img src="/images/sun.jpg", style='height: 100%; width: 100%; object-fit: contain'/>
+
 And let there be ligth!
+

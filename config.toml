@@ -9,6 +9,19 @@ pygmentCodeFences = true
 disqusShortname = "robbertjan94-github-io"
 googleAnalytics = "UA-99839400-1"
 
+[[menu.main]]
+    name = "Post"
+    url = "/post/"
+    weight = 1
+[[menu.main]]
+    name = "Blog"
+    url = "/blog/"
+    weight = 2
+[[menu.main]]
+    name = "About"
+    url = "/page/about_me/"
+    weight = 3
+
 [params]
     description = ""
 
@@ -26,18 +39,4 @@ googleAnalytics = "UA-99839400-1"
   instagram = "robbertjan94"
   spotify = "1154803600"
 
-[[menu.main]]
-    name = "Blog"
-    url = "blog/"
-    weight = 1
-
-[[menu.main]]
-    name = "Post"
-    url = "post/"
-    weight = 2
-    
-[[menu.main]]
-    name = "About"
-    url = "page/about_me/"
-    weight = 3
 

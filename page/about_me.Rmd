@@ -16,7 +16,7 @@ My motivation for building this website is threefold:
 
 #### Getting to know me
 
-I am Robbert-Jan 't Hoen, a 22 year old student living in the neighbourhood of Rotterdam, the Netherlands.   
+I am Robbert-Jan 't Hoen, a 22 year old student living in the neighbourhood of Rotterdam, the Netherlands. I hold a bachelor in Econometrics and Operations Research, and am currently pursuing a master in Quantitative Finance. My interests are mainly concerned with mathematics, statistics, machine learning, renewable energy, healthcare, new technologies, and almost all sports.
 
 #### Resume
 

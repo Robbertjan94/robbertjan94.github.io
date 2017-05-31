@@ -1,15 +1,22 @@
       <footer class="footer">
         <ul class="footer-links">
-          <li>
-            <a href="{{ .Site.RSSLink | relURL }}" type="application/rss+xml" target="_blank">RSS feed</a>
-          </li>
-          <li>
-            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="{{ "images/hugo-logo.png" | relURL }}" width="22" height="22"></a>
-          </li>
+          {{ with .Site.Params.social }}
+                     <li><a>{{.user}}</a></li>
+           <li><a href="https://linkedin.com/in/{{ .linkedin }}"><i class="fa fa-linkedin" aria-hidden="true" title="Linkedin"></i><span class="sr-only">Linkedin</span></a></li>
+          <li><a href="https://github.com/{{ .github }}"><i class="fa fa-github" aria-hidden="true" title="Github"></i><span class="sr-only">Github</span></a></li>
+ {{ end }}
+
+   <li><a href="/"><i class="fa fa-copyright" aria-hidden="true" title="Copyright"></i> 2017</a></li>
+
+<!--<li><a href="/"><i class="fa fa-copyright" aria-hidden="true" title="Copyright"></i> 2017 - {{ dateFormat "2006" .Site.LastChange }}</a></li>-->
+
         </ul>
       </footer>
 
     </div>
+    {{ range .Site.Params.customJS }}
+    <script async src="{{ . | relURL }}"></script>
+    {{ end }}
     {{ partial "footer_highlightjs" . }}
     {{ partial "footer_mathjax" . }}
     {{ template "_internal/google_analytics.html" . }}

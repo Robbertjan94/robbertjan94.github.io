@@ -33,6 +33,12 @@ googleAnalytics = "UA-99839400-1"
     height = 50
     alt = "Logo"
     
+    [params.social]
+    user = "Robbert-Jan 't Hoen"
+    github = "robbertjan94"
+    linkedin = "robbert-jan-t-hoen-b8930399"
+    
+    
 [Author]
   name = "Robbert-Jan 't Hoen"
   email = "robbertjan-1994@hotmail.com"

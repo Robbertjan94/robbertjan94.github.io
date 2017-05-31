@@ -23,6 +23,8 @@
 <meta property="keywords" content ="{{ delimit .Keywords ", " }}">
 {{ end }}
 
+<script src="https://use.fontawesome.com/d11019d12c.js"></script>
+
 {{ if .RSSLink }}
 <link href="{{ .RSSLink | relURL }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
 {{ end }}

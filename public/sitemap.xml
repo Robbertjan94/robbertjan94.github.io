@@ -2,84 +2,84 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://robbertjan94.github.io/post/post-customizing-hugo-themes-rmd/</loc>
+    <loc>/post/post-customizing-hugo-themes-rmd/</loc>
     <lastmod>2017-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://robbertjan94.github.io/post/first-blog-post/</loc>
+    <loc>/post/first-blog-post/</loc>
     <lastmod>2017-05-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://robbertjan94.github.io/</loc>
+    <loc>/</loc>
     <lastmod>2017-05-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://robbertjan94.github.io/page/about_me/</loc>
+    <loc>/page/about_me/</loc>
   </url>
   
   <url>
-    <loc>https://robbertjan94.github.io/categories/</loc>
+    <loc>/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://robbertjan94.github.io/tags/customizing/</loc>
-    <lastmod>2017-06-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://robbertjan94.github.io/tags/github/</loc>
-    <lastmod>2017-05-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://robbertjan94.github.io/tags/hugo/</loc>
+    <loc>/tags/customizing/</loc>
     <lastmod>2017-06-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://robbertjan94.github.io/categories/meta/</loc>
+    <loc>/tags/github/</loc>
     <lastmod>2017-05-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://robbertjan94.github.io/page/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://robbertjan94.github.io/post/</loc>
+    <loc>/tags/hugo/</loc>
     <lastmod>2017-06-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://robbertjan94.github.io/tags/rmarkdown/</loc>
+    <loc>/categories/meta/</loc>
     <lastmod>2017-05-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://robbertjan94.github.io/tags/</loc>
+    <loc>/page/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
     <lastmod>2017-06-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://robbertjan94.github.io/tags/template/</loc>
+    <loc>/tags/rmarkdown/</loc>
+    <lastmod>2017-05-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
     <lastmod>2017-06-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://robbertjan94.github.io/categories/web-development/</loc>
+    <loc>/tags/template/</loc>
+    <lastmod>2017-06-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/web-development/</loc>
     <lastmod>2017-06-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>

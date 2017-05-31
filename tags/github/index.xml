@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Github on Robbert-Jan &#39;t Hoen</title>
-    <link>https://robbertjan94.github.io/tags/github/</link>
+    <link>/tags/github/</link>
     <description>Recent content in Github on Robbert-Jan &#39;t Hoen</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>robbertjan-1994@hotmail.com (Robbert-Jan &#39;t Hoen)</managingEditor>
     <webMaster>robbertjan-1994@hotmail.com (Robbert-Jan &#39;t Hoen)</webMaster>
     <lastBuildDate>Sun, 28 May 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://robbertjan94.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/github/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>First blog post</title>
-      <link>https://robbertjan94.github.io/post/first-blog-post/</link>
+      <link>/post/first-blog-post/</link>
       <pubDate>Sun, 28 May 2017 00:00:00 +0000</pubDate>
       <author>robbertjan-1994@hotmail.com (Robbert-Jan &#39;t Hoen)</author>
-      <guid>https://robbertjan94.github.io/post/first-blog-post/</guid>
+      <guid>/post/first-blog-post/</guid>
       <description>And let there be ligth!
 After a few days of troubleshooting, I have finally succeeded in launching my first website with Hugo, hurray!
 Website setup I will start this website off by giving a brief overview of my current setup and stating my inentions for the short-term.

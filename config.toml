@@ -35,4 +35,7 @@ googleAnalytics = "UA-99839400-1"
   instagram = "robbertjan94"
   spotify = "1154803600"
 
+[taxonomies]
+   tag = "tags"
+   category = "categories"
 

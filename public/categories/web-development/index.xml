@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Themes on Robbert-Jan &#39;t Hoen</title>
-    <link>/tags/themes/</link>
-    <description>Recent content in Themes on Robbert-Jan &#39;t Hoen</description>
+    <title>Web Development on Robbert-Jan &#39;t Hoen</title>
+    <link>/categories/web-development/</link>
+    <description>Recent content in Web Development on Robbert-Jan &#39;t Hoen</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>robbertjan-1994@hotmail.com (Robbert-Jan &#39;t Hoen)</managingEditor>
     <webMaster>robbertjan-1994@hotmail.com (Robbert-Jan &#39;t Hoen)</webMaster>
     <lastBuildDate>Thu, 01 Jun 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/themes/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/categories/web-development/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Customizing Hugo Themes</title>
+      <title>Customizing Hugo templates</title>
       <link>/post/post-customizing-hugo-themes-rmd/</link>
       <pubDate>Thu, 01 Jun 2017 00:00:00 +0000</pubDate>
       <author>robbertjan-1994@hotmail.com (Robbert-Jan &#39;t Hoen)</author>

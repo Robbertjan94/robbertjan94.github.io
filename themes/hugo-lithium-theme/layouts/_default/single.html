@@ -13,7 +13,17 @@
     <span class="article-date">{{ .Date.Format "2006/01/02" }}</span>
     {{ end }}
 
-    <div class="article-content" style="font-size: 17px;">
+{{ if not (eq (len .Params.tags) 0) }}
+<br>
+<div style="font-size:14px;"> Tags: {{ range sort .Params.tags }}<a style="color:black;text-decoration:none;" href="/tags/{{ . | urlize }}">{{ . }}</a> {{ end }} </div>
+{{ end }}
+
+{{ if not (eq (len .Params.categories) 0) }}
+<div style="font-size:14px;"> Categories: {{ range sort .Params.categories }}<a style="color:black;text-decoration:none;" href="/tags/{{ . | urlize }}">{{ . }}</a> {{ end }} </div>
+{{ end }}
+
+
+<div class="article-content" style="font-size: 17px;">
       {{ .Content }}
     </div>
   </article>

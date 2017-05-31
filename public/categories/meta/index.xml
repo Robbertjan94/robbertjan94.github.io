@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Homepage on Robbert-Jan &#39;t Hoen</title>
-    <link>/</link>
-    <description>Recent content in Homepage on Robbert-Jan &#39;t Hoen</description>
+    <title>Meta on Robbert-Jan &#39;t Hoen</title>
+    <link>/categories/meta/</link>
+    <description>Recent content in Meta on Robbert-Jan &#39;t Hoen</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>robbertjan-1994@hotmail.com (Robbert-Jan &#39;t Hoen)</managingEditor>
     <webMaster>robbertjan-1994@hotmail.com (Robbert-Jan &#39;t Hoen)</webMaster>
     <lastBuildDate>Sun, 28 May 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/categories/meta/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -22,16 +22,6 @@
 After a few days of troubleshooting, I have finally succeeded in launching my first website with Hugo, hurray!
 Website setup I will start this website off by giving a brief overview of my current setup and stating my inentions for the short-term.
 My current setup is GitHub Pages + Hugo + Blogdown as recommended in this excellent tutorial by Amber Thomas. This allows me to create rich web content by utilizing Rmarkdown files with the blogdown package in Rstudio.</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>/page/about_me/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>robbertjan-1994@hotmail.com (Robbert-Jan &#39;t Hoen)</author>
-      <guid>/page/about_me/</guid>
-      <description>Getting to know me I am Robbert-Jan ’t Hoen, a 22 year old student living in the neighbourhood of Rotterdam, the Netherlands. I hold a bachelor in Econometrics and Operations Research, and am currently pursuing a master in Quantitative Finance. My interests are mainly concerned with mathematics, statistics, machine learning, renewable energy, healthcare, new technologies, and almost all sports. Click here for my resume.
- Purpose of the website My motivation for building this website is threefold:</description>
     </item>
     
   </channel>

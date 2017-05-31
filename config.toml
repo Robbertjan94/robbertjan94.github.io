@@ -20,7 +20,13 @@ googleAnalytics = "UA-99839400-1"
 
 [params]
     description = ""
-
+    
+    [params.widgets]
+    categories = true
+    tags = true
+    categories_counter = true
+    tags_counter = true
+    
     [params.logo]
     url = "logo.png"
     width = 50
@@ -38,4 +44,5 @@ googleAnalytics = "UA-99839400-1"
 [taxonomies]
    tag = "tags"
    category = "categories"
+
 

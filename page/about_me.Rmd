@@ -2,6 +2,8 @@
 title: About
 subtitle:
 comments: false
+tags: []
+categories: []
 ---
 
 ### Getting to know me

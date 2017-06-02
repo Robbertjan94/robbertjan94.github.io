@@ -28,10 +28,16 @@ googleAnalytics = "UA-99839400-1"
     tags_counter = true
     
     [params.logo]
-    url = "logo.png"
+    url = "logo_rj3.png"
     width = 50
     height = 50
     alt = "Logo"
+    
+    [params.favicon]
+    url = "favicon_rj.ico"
+    width = 50
+    height = 50
+    alt = "favicon"
     
     [params.social]
     user = "Robbert-Jan 't Hoen"

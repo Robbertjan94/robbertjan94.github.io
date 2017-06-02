@@ -23,7 +23,7 @@ googleAnalytics = "UA-99839400-1"
     
     [params.widgets]
     categories = true
-    tags = true
+    tags = true 
     categories_counter = true
     tags_counter = true
     
@@ -31,13 +31,7 @@ googleAnalytics = "UA-99839400-1"
     url = "logo_rj3.png"
     width = 50
     height = 50
-    alt = "Logo"
-    
-    [params.favicon]
-    url = "favicon_rj.ico"
-    width = 50
-    height = 50
-    alt = "favicon"
+    alt = "Logo" 
     
     [params.social]
     user = "Robbert-Jan 't Hoen"

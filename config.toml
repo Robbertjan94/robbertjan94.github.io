@@ -20,12 +20,13 @@ googleAnalytics = "UA-99839400-1"
 
 [params]
     description = ""
+    favicon = "favicon.ico"
     
     [params.widgets]
     categories = true
     tags = true 
     categories_counter = true
-    tags_counter = true
+    tags_counter = true 
     
     [params.logo]
     url = "logo_rj3.png"

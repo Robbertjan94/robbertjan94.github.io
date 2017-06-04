@@ -28,7 +28,9 @@
     </div>
   </article>
 
-  {{ partial "disqus.html" .}}
+{{if (.Params.comments)}}
+{{ partial "disqus.html" .}}
+{{end}}
 
 </main>
 

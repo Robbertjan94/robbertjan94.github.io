@@ -27,12 +27,9 @@
       {{ .Content }}
     </div>
   </article>
-  
-{{ if eq .Site.Params.Comments false }}
 
   {{ partial "disqus.html" .}}
 
-{{ end }}
 </main>
 
 {{ partial "footer.html" . }}

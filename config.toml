@@ -14,9 +14,13 @@ googleAnalytics = "UA-99839400-1"
     url = "/post/"
     weight = 2
 [[menu.main]]
+    name = "Vitae"
+    url = "/page/vitae/"
+    weight = 3
+[[menu.main]]
     name = "About"
     url = "/page/about_me/"
-    weight = 3
+    weight = 4
 
 [params]
     description = ""

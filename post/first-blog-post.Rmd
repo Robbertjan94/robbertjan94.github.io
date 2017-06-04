@@ -2,6 +2,7 @@
 title: First blog post
 date: '2017-05-28'
 description: "In this first blog post I describe my setup"
+comments: true
 categories: [meta]
 tags: [hugo, github, rmarkdown]
 ---

@@ -10,17 +10,26 @@
     <h1 class="article-title">{{ .Title }}</h1>
 
     {{ if eq .Section "post" }}
-    <span class="article-date">{{ .Date.Format "2006/01/02" }}</span>
+    <span class="article-date">{{ .Date.Format "2006/01/02" }} 
+    
+    
+    {{ if not (eq (len .Params.categories) 0) }} &bull;
+<span style="font-size:14px;color:light grey;">{{ range sort .Params.categories }}<a style="color:light grey;text-decoration:none;" href="/tags/{{ . | urlize }}">{{ . }}</a> {{ end }} </span>
+{{ end }}
+
+    &bull;
+    {{ if not (eq (len .Params.tags) 0) }}
+<span style="font-size:14px;"> <i class="fa fa-tags" aria-hidden="true"></i> 
+
+{{ range sort .Params.tags }}<a style="color:light grey;text-decoration:none;" href="/tags/{{ . | urlize }}">{{ . }}</a> {{ end }} </span>
+{{ end }}
+
+
+</span>
     {{ end }}
 
-{{ if not (eq (len .Params.tags) 0) }}
-<br>
-<div style="font-size:14px;"> Tags: {{ range sort .Params.tags }}<a style="color:black;text-decoration:none;" href="/tags/{{ . | urlize }}">{{ . }}</a> {{ end }} </div>
-{{ end }}
 
-{{ if not (eq (len .Params.categories) 0) }}
-<div style="font-size:14px;"> Categories: {{ range sort .Params.categories }}<a style="color:black;text-decoration:none;" href="/tags/{{ . | urlize }}">{{ . }}</a> {{ end }} </div>
-{{ end }}
+
 
 
 <div class="article-content" style="font-size: 19px;">

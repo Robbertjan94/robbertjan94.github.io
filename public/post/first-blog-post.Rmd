@@ -10,7 +10,7 @@ tags: [hugo, github, rmarkdown]
 
 <img src="/images/sun.jpg", style='height: 100%; width: 100%; object-fit: contain'/>
 
-And let there be ligth! 
+And let there be ligth!
 
 After a few days of troubleshooting, I have finally succeeded in launching my first website with <a href="https://gohugo.io/">Hugo</a>, hurray!
 

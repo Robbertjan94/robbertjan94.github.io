@@ -25,9 +25,11 @@ googleAnalytics = "UA-99839400-1"
 [params]
     description = ""
     favicon = "favicon.ico"
+    customCSS = ["css/custom.css"]
+
     
     [params.widgets]
-    categories = true
+    categories = true 
     tags = true 
     categories_counter = true
     tags_counter = true 

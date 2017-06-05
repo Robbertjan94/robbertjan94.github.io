@@ -2,7 +2,9 @@
 title: Vitae
 subtitle:
 comments: false
+prev_next: false
 tags: []
 categories: []
 ---
 
+Click here for my <a href="https://drive.google.com/open?id=0ByAqaAE8VwZ5V1hvaThqS3hrVk0" >resume</a>.

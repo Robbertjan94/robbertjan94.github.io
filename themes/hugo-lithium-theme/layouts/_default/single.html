@@ -23,9 +23,15 @@
 {{ end }}
 
 
-<div class="article-content" style="font-size: 17px;">
+<div class="article-content" style="font-size: 19px;">
       {{ .Content }}
     </div>
+    <div>
+      {{if (.Params.prev_next)}}
+      {{ partial "prev_next.html" . }}
+      {{end}}
+    </div>
+    
   </article>
 
 {{if (.Params.comments)}}

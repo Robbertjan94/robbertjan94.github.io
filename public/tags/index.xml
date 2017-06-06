@@ -2,40 +2,67 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Robbert-Jan &#39;t Hoen</title>
-    <link>https://robbertjan94.github.io/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on Robbert-Jan &#39;t Hoen</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>robbertjan-1994@hotmail.com (Robbert-Jan &#39;t Hoen)</managingEditor>
     <webMaster>robbertjan-1994@hotmail.com (Robbert-Jan &#39;t Hoen)</webMaster>
     <lastBuildDate>Sun, 28 May 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://robbertjan94.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Github</title>
-      <link>https://robbertjan94.github.io/tags/github/</link>
+      <link>/tags/github/</link>
       <pubDate>Sun, 28 May 2017 00:00:00 +0000</pubDate>
       <author>robbertjan-1994@hotmail.com (Robbert-Jan &#39;t Hoen)</author>
-      <guid>https://robbertjan94.github.io/tags/github/</guid>
+      <guid>/tags/github/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hugo</title>
-      <link>https://robbertjan94.github.io/tags/hugo/</link>
+      <link>/tags/hugo/</link>
       <pubDate>Sun, 28 May 2017 00:00:00 +0000</pubDate>
       <author>robbertjan-1994@hotmail.com (Robbert-Jan &#39;t Hoen)</author>
-      <guid>https://robbertjan94.github.io/tags/hugo/</guid>
+      <guid>/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linear Algebra</title>
+      <link>/tags/linear-algebra/</link>
+      <pubDate>Tue, 06 Jun 2017 00:00:00 +0000</pubDate>
+      <author>robbertjan-1994@hotmail.com (Robbert-Jan &#39;t Hoen)</author>
+      <guid>/tags/linear-algebra/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Refactoring</title>
+      <link>/tags/refactoring/</link>
+      <pubDate>Tue, 06 Jun 2017 00:00:00 +0000</pubDate>
+      <author>robbertjan-1994@hotmail.com (Robbert-Jan &#39;t Hoen)</author>
+      <guid>/tags/refactoring/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Rmarkdown</title>
-      <link>https://robbertjan94.github.io/tags/rmarkdown/</link>
+      <link>/tags/rmarkdown/</link>
       <pubDate>Sun, 28 May 2017 00:00:00 +0000</pubDate>
       <author>robbertjan-1994@hotmail.com (Robbert-Jan &#39;t Hoen)</author>
-      <guid>https://robbertjan94.github.io/tags/rmarkdown/</guid>
+      <guid>/tags/rmarkdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vectorization</title>
+      <link>/tags/vectorization/</link>
+      <pubDate>Tue, 06 Jun 2017 00:00:00 +0000</pubDate>
+      <author>robbertjan-1994@hotmail.com (Robbert-Jan &#39;t Hoen)</author>
+      <guid>/tags/vectorization/</guid>
       <description></description>
     </item>
     

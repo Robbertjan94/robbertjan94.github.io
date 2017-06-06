@@ -23,10 +23,15 @@ tags: [vectorization, refactoring, linear algebra]
 <li>Appearance: Vectorized mathematical code appears more like the mathematical expressions found in textbooks, making the code easier to understand.</li>
 <li>Less Error Prone: Without loops, vectorized code is often shorter. Fewer lines of code mean fewer opportunities to introduce programming errors.</li>
 <li>Performance: Vectorized code often runs much faster than the corresponding code containing loops.</li>
-<li>Scalability: Matrix based methods are very generic and therefore usually nest many different models.</li>
+<li>Scalability: Matrix based methods are generic and therefore usually nest many different models.</li>
 </ul>
-<div id="mathematical-behind-vectorization" class="section level4">
-<h4>Mathematical behind vectorization</h4>
-<p>Vectorization works by utilizing advanced techniques based on mathematical matrix theory.</p>
+<div id="mathematics-behind-vectorization" class="section level4">
+<h4>Mathematics behind vectorization</h4>
+<p>Under the hood, vectorization works by utilizing advanced techniques based on mathematical matrix theory, and therefore, to truly grasp the ideas behind vectorization, it is necessary to get our hands dirty — we will have to take a look at the mathematics that makes up most of our beloved models.</p>
+<p>The key subarea of mathematics involved with computers and programming is linear algebra, the language of vectors and matrices. Below, I will give a short introduction to linear algebra to give you some intuition, however, if you are interested to learn about it in some more detail, then I advise this <a href="http://www.cs.cas.cz/duintjertebbens/pubs/Lang1.pdf">book</a> for a thorough introduction to linear algebra by Serge Lang, former professor emeritus of mathematics at Yale University.</p>
+<div style="border-style:solid; border-width: 2px;border-radius:5px;padding: 0px 10px 0px 10px;">
+<p><strong><em>Linear algebra introduction</em></strong> <br> In everyday life, we continuously use numbers and perform predefined operations, such as addition <span class="math inline">\(+\)</span>, subtraction <span class="math inline">\(-\)</span>, and multiplication <span class="math inline">\(\times\)</span> that all take two and return one number. <br></p>
+<p>In linear algebra, this is seen as the <span class="math inline">\(1\)</span>-dimensional special case of a more general <span class="math inline">\(n\)</span>-dimensional space. The building blocks of this <span class="math inline">\(n\)</span>-dimensional space are so-called <span class="math inline">\(n\)</span>-tuples,<span class="math display">\[(x_1, x_2, ..., x_n) ,\]</span>otherwise known as vectors. The numbers <span class="math inline">\(x_1, x_2, ..., x_n\)</span> are called coordinates, and in <span class="math inline">\(1\)</span>-dimensional space they represent a point on a line, in <span class="math inline">\(2\)</span>-dimensional space they represent a point on a plane, in <span class="math inline">\(3\)</span>-dimensional space they represent a point on a <span class="math inline">\(3\)</span>d surface, <span class="math inline">\(...\)</span>, and finally, in <span class="math inline">\(n\)</span>-dimensional space they represent a point on a <span class="math inline">\(n\)</span>d surface.</p>
+</div>
 </div>
 </div>

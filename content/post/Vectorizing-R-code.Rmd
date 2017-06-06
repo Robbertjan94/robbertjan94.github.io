@@ -8,27 +8,23 @@ categories: [R]
 tags: [vectorization, refactoring, linear algebra]
 ---
 
+### The beginning ...
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+Somewhere last January I began my R adventure, which means that I have been programming with it for almost five months now. Prior to this period, my only experiences with R have been very frustrating, to say the least. These might have occurred while I was looking for the implementation of an obscure econometrical method or the one or two times that I tried to learn R and failed miserably. Me not being able to learn R at once is not that surprising, considering that R is a quirky language with a though learning curve. However, these things were not the only cause of my failure, what felt as the main cause was the difference between R and my previous programming language: [MATLAB®](https://nl.mathworks.com/?s_tid=gn_logo).
 
-## R Markdown
+Matlab is a matrix based language optimized for operations involving matrices and vectors. This means that it is possible to perform computations directly on whole vectors and matrices instead on scalars (numbers) alone. Hence, in MATLAB it is encouraged to, for example, avoid endless nested loops and instead use matrix based methods. 
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+The programming paradigm of MATLAB is therefore completely different from the R philosophy, that customarily dictates the use of the [apply](https://stackoverflow.com/a/7141669/8108484) family that loops over individual data points. This has resulted in the somewhat unfortunate reputation that R is inherently [slow](http://fluff.info/blog/arch/00000172.htm). While there is some truth to this statement, because compiled languages are of course faster, the performance of R has improved a lot over the years. For example, by introducing built in functions (e.g. `colSums`) that use matrix based methods and that have been written in low-level languages like C and Fortran. 
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+### Vectorization
 
-```{r cars}
-summary(cars)
-```
+The process of revising loop-based, scalar-oriented code to use matrix and vector operations is called *vectorization*. Vectorizing your code is worthwhile for several reasons:
 
-## Including Plots
+- Appearance: Vectorized mathematical code appears more like the mathematical expressions found in textbooks, making the code easier to understand.
+- Less Error Prone: Without loops, vectorized code is often shorter. Fewer lines of code mean fewer opportunities to introduce programming errors.
+- Performance: Vectorized code often runs much faster than the corresponding code containing loops.
+- Scalability: Matrix based methods are very generic and therefore usually nest many different models.
 
-You can also embed plots, for example:
+#### Mathematical behind vectorization
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+Vectorization works by utilizing advanced techniques based on mathematical matrix theory. 

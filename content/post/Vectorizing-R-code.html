@@ -10,22 +10,23 @@ tags: [vectorization, refactoring, linear algebra]
 
 
 
-<div id="r-markdown" class="section level2">
-<h2>R Markdown</h2>
-<p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
-<p>When you click the <strong>Knit</strong> button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:</p>
-<pre class="r"><code>summary(cars)</code></pre>
-<pre><code>##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00</code></pre>
+<div id="the-beginning" class="section level3">
+<h3>The beginning …</h3>
+<p>Somewhere last January I began my R adventure, which means that I have been programming with it for almost five months now. Prior to this period, my only experiences with R have been very frustrating, to say the least. These might have occurred while I was looking for the implementation of an obscure econometrical method or the one or two times that I tried to learn R and failed miserably. Me not being able to learn R at once is not that surprising, considering that R is a quirky language with a though learning curve. However, these things were not the only cause of my failure, what felt as the main cause was the difference between R and my previous programming language: <a href="https://nl.mathworks.com/?s_tid=gn_logo">MATLAB®</a>.</p>
+<p>Matlab is a matrix based language optimized for operations involving matrices and vectors. This means that it is possible to perform computations directly on whole vectors and matrices instead on scalars (numbers) alone. Hence, in MATLAB it is encouraged to, for example, avoid endless nested loops and instead use matrix based methods.</p>
+<p>The programming paradigm of MATLAB is therefore completely different from the R philosophy, that customarily dictates the use of the <a href="https://stackoverflow.com/a/7141669/8108484">apply</a> family that loops over individual data points. This has resulted in the somewhat unfortunate reputation that R is inherently <a href="http://fluff.info/blog/arch/00000172.htm">slow</a>. While there is some truth to this statement, because compiled languages are of course faster, the performance of R has improved a lot over the years. For example, by introducing built in functions (e.g. <code>colSums</code>) that use matrix based methods and that have been written in low-level languages like C and Fortran.</p>
 </div>
-<div id="including-plots" class="section level2">
-<h2>Including Plots</h2>
-<p>You can also embed plots, for example:</p>
-<p><img src="/post/Vectorizing-R-code_files/figure-html/pressure-1.png" width="672" /></p>
-<p>Note that the <code>echo = FALSE</code> parameter was added to the code chunk to prevent printing of the R code that generated the plot.</p>
+<div id="vectorization" class="section level3">
+<h3>Vectorization</h3>
+<p>The process of revising loop-based, scalar-oriented code to use matrix and vector operations is called <em>vectorization</em>. Vectorizing your code is worthwhile for several reasons:</p>
+<ul>
+<li>Appearance: Vectorized mathematical code appears more like the mathematical expressions found in textbooks, making the code easier to understand.</li>
+<li>Less Error Prone: Without loops, vectorized code is often shorter. Fewer lines of code mean fewer opportunities to introduce programming errors.</li>
+<li>Performance: Vectorized code often runs much faster than the corresponding code containing loops.</li>
+<li>Scalability: Matrix based methods are very generic and therefore usually nest many different models.</li>
+</ul>
+<div id="mathematical-behind-vectorization" class="section level4">
+<h4>Mathematical behind vectorization</h4>
+<p>Vectorization works by utilizing advanced techniques based on mathematical matrix theory.</p>
+</div>
 </div>

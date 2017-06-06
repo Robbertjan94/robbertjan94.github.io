@@ -23,8 +23,19 @@ The process of revising loop-based, scalar-oriented code to use matrix and vecto
 - Appearance: Vectorized mathematical code appears more like the mathematical expressions found in textbooks, making the code easier to understand.
 - Less Error Prone: Without loops, vectorized code is often shorter. Fewer lines of code mean fewer opportunities to introduce programming errors.
 - Performance: Vectorized code often runs much faster than the corresponding code containing loops.
-- Scalability: Matrix based methods are very generic and therefore usually nest many different models.
+- Scalability: Matrix based methods are generic and therefore usually nest many different models.
 
-#### Mathematical behind vectorization
+#### Mathematics behind vectorization
 
-Vectorization works by utilizing advanced techniques based on mathematical matrix theory. 
+Under the hood, vectorization works by utilizing advanced techniques based on mathematical matrix theory, and therefore, to truly grasp the ideas behind vectorization, it is necessary to get our hands dirty --- we will have to take a look at the mathematics that makes up most of our beloved models.
+
+The key subarea of mathematics involved with computers and programming is linear algebra, the language of vectors and matrices. Below, I will give a short introduction to linear algebra to give you some intuition, however, if you are interested to learn about it in some more detail, then I advise this [book](http://www.cs.cas.cz/duintjertebbens/pubs/Lang1.pdf) for a thorough introduction to linear algebra by Serge Lang, former professor emeritus of mathematics at Yale University. 
+
+<div style="border-style:solid; border-width: 2px;border-radius:5px;padding: 0px 10px 0px 10px;"> 
+***Linear algebra introduction***
+<br>
+In everyday life, we continuously use numbers and perform predefined operations, such as addition $+$, subtraction $-$, and multiplication $\times$ that all take two and return one number. 
+<br>
+
+In linear algebra, this is seen as the $1$-dimensional special case of a more general $n$-dimensional space. The building blocks of this $n$-dimensional space are so-called $n$-tuples,$$(x_1, x_2, ..., x_n) ,$$otherwise known as vectors. The numbers $x_1, x_2, ..., x_n$ are called coordinates, and in $1$-dimensional space they represent a point on a line, in $2$-dimensional space they represent a point on a plane, in $3$-dimensional space they represent a point on a $3$d surface, $...$, and finally, in $n$-dimensional space they represent a point on a $n$d surface.
+</div>

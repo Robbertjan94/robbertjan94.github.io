@@ -14,8 +14,9 @@ And let there be ligth!
 
 After a few days of troubleshooting, I have finally succeeded in launching my first website with <a href="https://gohugo.io/">Hugo</a>, hurray!
 
+I will start this website off by giving a brief overview of my current setup and stating my intentions for the shorter-term.
+
 ### Website setup
-I will start this website off by giving a brief overview of my current setup and stating my inentions for the shorter-term.
 
 My current setup is <a href="https://pages.github.com/">GitHub Pages</a> + Hugo + <a href="https://github.com/rstudio/blogdown">Blogdown</a> as recommended in this excellent <a href="https://proquestionasker.github.io/blog/Making_Site/"> tutorial</a> by <a href="https://github.com/ProQuestionAsker">Amber Thomas</a>. This allows me to create rich web content by utilizing <a href="http://rmarkdown.rstudio.com/">Rmarkdown</a> files with the blogdown package in Rstudio. This smoothly integrates with my personal data analysis projects that are mainly done in the R statistical programming language. As an Rmarkdown file is essentially an extended version of markdown it is also still possible to include plain html markup, and create beautiful mathematical equations with <a href="https://en.wikibooks.org/wiki/LaTeX">LaTeX</a>.
 

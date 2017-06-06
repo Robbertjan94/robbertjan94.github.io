@@ -2,36 +2,33 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Robbert-Jan &#39;t Hoen</title>
-    <link>https://robbertjan94.github.io/post/</link>
+    <link>/post/</link>
     <description>Recent content in Posts on Robbert-Jan &#39;t Hoen</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>robbertjan-1994@hotmail.com (Robbert-Jan &#39;t Hoen)</managingEditor>
     <webMaster>robbertjan-1994@hotmail.com (Robbert-Jan &#39;t Hoen)</webMaster>
     <lastBuildDate>Tue, 06 Jun 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://robbertjan94.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Vectorizing R code</title>
-      <link>https://robbertjan94.github.io/post/vectorizing-r-code/</link>
+      <link>/post/vectorizing-r-code/</link>
       <pubDate>Tue, 06 Jun 2017 00:00:00 +0000</pubDate>
       <author>robbertjan-1994@hotmail.com (Robbert-Jan &#39;t Hoen)</author>
-      <guid>https://robbertjan94.github.io/post/vectorizing-r-code/</guid>
-      <description>R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
-When you click the Knit button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-summary(cars) ## speed dist ## Min.</description>
+      <guid>/post/vectorizing-r-code/</guid>
+      <description>The beginning … Somewhere last January I began my R adventure, which means that I have been programming with it for almost five months now. Prior to this period, my only experiences with R have been very frustrating, to say the least. These might have occurred while I was looking for the implementation of an obscure econometrical method or the one or two times that I tried to learn R and failed miserably.</description>
     </item>
     
     <item>
       <title>First blog post</title>
-      <link>https://robbertjan94.github.io/post/first-blog-post/</link>
+      <link>/post/first-blog-post/</link>
       <pubDate>Sun, 28 May 2017 00:00:00 +0000</pubDate>
       <author>robbertjan-1994@hotmail.com (Robbert-Jan &#39;t Hoen)</author>
-      <guid>https://robbertjan94.github.io/post/first-blog-post/</guid>
+      <guid>/post/first-blog-post/</guid>
       <description>And let there be ligth!
-After a few days of troubleshooting, I have finally succeeded in launching my first website with Hugo, hurray!
-I will start this website off by giving a brief overview of my current setup and stating my intentions for the shorter-term.
+After a few days of troubleshooting, I have finally succeeded in launching my first website with Hugo, hurray! I will start this website off by giving a brief overview of my current setup and stating my intentions for the shorter-term.
 Website setup My current setup is GitHub Pages + Hugo + Blogdown as recommended in this excellent tutorial by Amber Thomas. This allows me to create rich web content by utilizing Rmarkdown files with the blogdown package in Rstudio.</description>
     </item>
     

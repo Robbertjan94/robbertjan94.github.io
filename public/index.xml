@@ -2,52 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Homepage on Robbert-Jan &#39;t Hoen</title>
-    <link>https://robbertjan94.github.io/</link>
+    <link>/</link>
     <description>Recent content in Homepage on Robbert-Jan &#39;t Hoen</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>robbertjan-1994@hotmail.com (Robbert-Jan &#39;t Hoen)</managingEditor>
     <webMaster>robbertjan-1994@hotmail.com (Robbert-Jan &#39;t Hoen)</webMaster>
     <lastBuildDate>Sun, 28 May 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://robbertjan94.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Vectorizing R code</title>
-      <link>https://robbertjan94.github.io/post/vectorizing-r-code/</link>
+      <title>Vectorizing R code and why it works</title>
+      <link>/post/vectorizing-r-code/</link>
       <pubDate>Tue, 06 Jun 2017 00:00:00 +0000</pubDate>
       <author>robbertjan-1994@hotmail.com (Robbert-Jan &#39;t Hoen)</author>
-      <guid>https://robbertjan94.github.io/post/vectorizing-r-code/</guid>
+      <guid>/post/vectorizing-r-code/</guid>
       <description>The beginning … Somewhere last January I began my R adventure, which means that I have been programming with it for almost five months now. Prior to this period, my only experiences with R have been very frustrating, to say the least. These might have occurred while I was looking for the implementation of an obscure econometrical method or the one or two times that I tried to learn R and failed miserably.</description>
     </item>
     
     <item>
       <title>First blog post</title>
-      <link>https://robbertjan94.github.io/post/first-blog-post/</link>
+      <link>/post/first-blog-post/</link>
       <pubDate>Sun, 28 May 2017 00:00:00 +0000</pubDate>
       <author>robbertjan-1994@hotmail.com (Robbert-Jan &#39;t Hoen)</author>
-      <guid>https://robbertjan94.github.io/post/first-blog-post/</guid>
+      <guid>/post/first-blog-post/</guid>
       <description>And let there be ligth!
-After a few days of troubleshooting, I have finally succeeded in launching my first website with Hugo, hurray! I will start this website off by giving a brief overview of my current setup and stating my intentions for the shorter-term.
+After a few days of troubleshooting, I have finally succeeded in launching my first website with Hugo, hurray! I will start this website off by giving a brief overview of my current website setup and stating my intentions for the shorter-term.
 Website setup My current setup is GitHub Pages + Hugo + Blogdown as recommended in this excellent tutorial by Amber Thomas. This allows me to create rich web content by utilizing Rmarkdown files with the blogdown package in Rstudio.</description>
     </item>
     
     <item>
       <title>About</title>
-      <link>https://robbertjan94.github.io/page/about_me/</link>
+      <link>/page/about_me/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>robbertjan-1994@hotmail.com (Robbert-Jan &#39;t Hoen)</author>
-      <guid>https://robbertjan94.github.io/page/about_me/</guid>
+      <guid>/page/about_me/</guid>
       <description>Getting to know me I am Robbert-Jan ’t Hoen, a 22 year old student living in the neighbourhood of Rotterdam, the Netherlands. I hold a bachelor in Econometrics and Operations Research, and am currently pursuing a master in Quantitative Finance. My interests are mainly concerned with mathematics, statistics, machine learning, renewable energy, healthcare, new technologies, and almost all sports.
  Purpose of the website My motivation for building this website is threefold:</description>
     </item>
     
     <item>
       <title>Vitae</title>
-      <link>https://robbertjan94.github.io/page/vitae/</link>
+      <link>/page/vitae/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>robbertjan-1994@hotmail.com (Robbert-Jan &#39;t Hoen)</author>
-      <guid>https://robbertjan94.github.io/page/vitae/</guid>
+      <guid>/page/vitae/</guid>
       <description>Click here for my resume.</description>
     </item>
     

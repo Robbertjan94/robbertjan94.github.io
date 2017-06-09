@@ -12,7 +12,7 @@ tags: [hugo, github, rmarkdown]
 
 And let there be ligth!
 
-After a few days of troubleshooting, I have finally succeeded in launching my first website with <a href="https://gohugo.io/">Hugo</a>, hurray! I will start this website off by giving a brief overview of my current setup and stating my intentions for the shorter-term.
+After a few days of troubleshooting, I have finally succeeded in launching my first website with <a href="https://gohugo.io/">Hugo</a>, hurray! I will start this website off by giving a brief overview of my current website setup and stating my intentions for the shorter-term.
 
 ### Website setup
 

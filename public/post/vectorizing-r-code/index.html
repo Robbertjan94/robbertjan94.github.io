@@ -231,14 +231,14 @@ value_portfolio &lt;- rowSums(prices*volume)
 <h3>Other ways to improve your code</h3>
 <p>Of course, vectorization is not the only way to improve your code in R. There is a host of other things that can be done:</p>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Parallel_computing">Parallelization</a>; Parallel computing is a type of computation in which many calculations are carried out simultaneously. A requirement for parallel computing is that the calculations are independent. Those kind of calculations are usually referred to as ‘embarrassingly parallel’, because they unnecessarily take lots of time when processed sequentially.</li>
-<li><a href="http://www.rcpp.org/">Rcpp</a>; the most probable cause of slow code in R are huge numbers of nested for loops. This problem can be mitigated by implementing the loops directly in low-level programming languages like C or C++.</li>
 <li><a href="https://google.github.io/styleguide/Rguide.xml">Coding conventions</a>; One day, someone, heck it might even be you, will be looking at your code, that has been written months ago, and won’t be able to understand a thing. All because of a total lack of consistency and the brilliant idea to name every other variable something along the lines of ‘VAR-squared_Final.v3’. To improve the sharability and longevity of code, it is hence of utmost importance to adhere to, at least, some kind of coding conventions.
 <center>
 <blockquote>
 <p>“Good code is like a good joke, it needs no explanation”</p>
 </blockquote>
 </center></li>
+<li><a href="https://en.wikipedia.org/wiki/Parallel_computing">Parallelization</a>; Parallel computing is a type of computation in which many calculations are carried out simultaneously. A requirement for parallel computing is that the calculations are independent. Those kind of calculations are usually referred to as ‘embarrassingly parallel’, because they unnecessarily take lots of time when processed sequentially.</li>
+<li><a href="http://www.rcpp.org/">Rcpp</a>; the most probable cause of slow code in R are huge numbers of nested for loops. This problem can be mitigated by implementing the loops directly in low-level programming languages like C or C++.</li>
 <li><span class="math inline">\(...\)</span></li>
 </ul>
 <p>I will cover these topics in more detail in later blog posts.</p>

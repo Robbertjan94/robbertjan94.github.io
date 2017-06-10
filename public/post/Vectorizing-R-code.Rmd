@@ -168,8 +168,6 @@ value_portfolio <- rowSums(prices*volume)
 
 It should now be clear that vectorization not only improves performance, but that it also improves readability, makes code less error prone (can you spot them?), and more flexible.
 
-**EXAMPLE 3.**
-
 ### Other ways to improve your code
 
 Of course, vectorization is not the only way to improve your code in R. There is a host of other things that can be done:

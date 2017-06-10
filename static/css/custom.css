@@ -11,6 +11,7 @@ a {
   text-align: justify;
 }
 code {
+  background-color: #f3f3f3;
   hyphens: none;
 }
 .article-content a {
@@ -71,8 +72,8 @@ table thead th {
 main {
   display: block;
 }
-pre .nohighlight {
-  background-color: transparent;
+pre {
+  background-color: #f3f3f3;
   border: 1px solid #f3f3f3;
   display: block;
   padding: .5em;

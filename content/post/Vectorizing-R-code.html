@@ -1,7 +1,10 @@
 ---
 title: "Vectorizing R code and why it works"
 date: '2017-06-06'
-output: html_document
+output: 
+  html_document:
+    theme: default
+    highlight: null
 comments: true
 prev_next: true
 categories: [R]
@@ -12,9 +15,9 @@ tags: [vectorization, refactoring, linear algebra]
 
 <div id="the-beginning" class="section level3">
 <h3>The beginning …</h3>
-<p>Somewhere last January I began my R adventure, which means that I have been programming with it for almost five months now. Prior to this period, my only experiences with R have been very frustrating, to say the least. These might have occurred while I was looking for the implementation of an obscure econometrical method or the one or two times that I tried to learn R and failed miserably. Me not being able to learn R at once is not that surprising, considering that R is a quirky language with a though learning curve. However, these things were not the only cause of my failure, what felt as the main cause was the difference between R and my previous programming language: <a href="https://nl.mathworks.com/?s_tid=gn_logo">MATLAB®</a>.</p>
+<p>Somewhere last January I began my R adventure, which means that I have been programming with it for almost five months now. Prior to this period, my only experiences with R have been very frustrating, to say the least. These might have occurred while I was looking for the implementation of an obscure econometrical method or the one or two times that I tried to learn R and failed miserably. Me not being able to learn R at once is not that surprising, considering that R is a quirky language with a though learning curve. However, these things were not the only cause of my failures, what felt as the main cause was the difference between R and my previous programming language: <a href="https://nl.mathworks.com/?s_tid=gn_logo">MATLAB®</a>.</p>
 <p>Matlab is a matrix based language optimized for operations involving matrices and vectors. This means that it is possible to perform computations directly on whole vectors and matrices instead on scalars (numbers) alone. Hence, in MATLAB it is encouraged to, for example, avoid endless nested loops and instead use matrix based methods.</p>
-<p>The programming paradigm of MATLAB is therefore completely different from the R philosophy, that customarily dictates the use of the <a href="https://stackoverflow.com/a/7141669/8108484">apply</a> family that loops over individual data points. This has resulted in the somewhat unfortunate reputation that R is inherently <a href="http://fluff.info/blog/arch/00000172.htm">slow</a>. While there is some truth to this statement, because compiled languages are of course faster, the performance of R has improved a lot over the years. For example, by introducing built in functions (e.g. <code>colSums</code>) that use matrix based methods and that have been written in low-level languages like C and Fortran.</p>
+<p>The programming paradigm of MATLAB is therefore completely different from the R philosophy, that customarily dictates the use of the <a href="https://stackoverflow.com/a/7141669/8108484">apply</a> family that loops over individual data points. This has resulted in the somewhat unfortunate reputation that R is inherently <a href="http://fluff.info/blog/arch/00000172.htm">slow</a>. While there is some truth to this statement, because compiled languages are of course faster, the performance of R has improved a lot over the years. For example, by introducing built in functions (e.g. <code>rowSums</code>) that use matrix based methods and that have been written in low-level languages like C and Fortran.</p>
 </div>
 <div id="vectorization" class="section level3">
 <h3>Vectorization</h3>
@@ -28,16 +31,114 @@ tags: [vectorization, refactoring, linear algebra]
 <div id="mathematics-behind-vectorization" class="section level4">
 <h4>Mathematics behind vectorization</h4>
 <p>Under the hood, vectorization works by utilizing advanced techniques based on mathematical matrix theory, and therefore, to truly grasp the ideas behind vectorization, it is necessary to get our hands dirty — we will have to take a look at the mathematics that makes up most of our beloved models.</p>
-<p>The key subarea of mathematics involved with computers and programming is linear algebra, the language of vectors and matrices. Below, I will give a short introduction to linear algebra to give you some intuition, however, if you are interested to learn about it in some more detail, then I advise this <a href="http://www.cs.cas.cz/duintjertebbens/pubs/Lang1.pdf">book</a> for a thorough introduction to linear algebra by Serge Lang, former professor emeritus of mathematics at Yale University.</p>
+<p>The key subarea of mathematics involved with computers and programming is linear algebra, the language of vectors and matrices. Below, I will give a short introduction to give you some intuition, however, if you are interested to learn about it in some more detail, then I advise this <a href="http://www.cs.cas.cz/duintjertebbens/pubs/Lang1.pdf">book</a> for a thorough introduction to linear algebra by Serge Lang, former professor emeritus of mathematics at Yale University.</p>
 <div style="border-style:solid; border-width: 2px;border-radius:5px;padding: 0px 10px 0px 10px;">
 <p><strong><em>Linear algebra introduction</em></strong> <br> In everyday life, we continuously use numbers and perform operations, such as addition <span class="math inline">\(+\)</span>, subtraction <span class="math inline">\(-\)</span>, and multiplication <span class="math inline">\(\times\)</span> that all take two and return one number. <br></p>
 <p>In linear algebra, this is seen as the <span class="math inline">\(1\)</span>-dimensional special case of a more general <span class="math inline">\(n\)</span>-dimensional space. The building blocks of this <span class="math inline">\(n\)</span>-dimensional space are so-called <span class="math inline">\(n\)</span>-tuples,<span class="math display">\[(x_1, x_2, ..., x_n) ,\]</span>otherwise known as vectors. The numbers <span class="math inline">\(x_1, x_2, ..., x_n\)</span> are called coordinates, and in <span class="math inline">\(1\)</span>-dimensional space they represent a point on a line, in <span class="math inline">\(2\)</span>-dimensional space they represent a point on a plane, in <span class="math inline">\(3\)</span>-dimensional space they represent a point on a <span class="math inline">\(3\)</span>d surface, <span class="math inline">\(...\)</span>, and finally, in <span class="math inline">\(n\)</span>-dimensional space they represent a point on a <span class="math inline">\(n\)</span>d surface. <br></p>
 <!-- As for numbers, there exist operations on vectors. Vector operations are a more general case of the ordinary operations. There is addition, which behaves very similar to scalar addition, as it takes two $n \times 1$ vectors and returns a single $n \times 1$ vector by performing element-wise addition. Vector multiplication, in the element-wise sense, is called the dot product, which takes two $n \times 1$ vectors and returns a single $n \times 1$ vector by performing element-wise multiplication. -->
 <!-- <br> -->
-<p>In turn, <span class="math inline">\(n\)</span>-dimensional vectors are a special case of <span class="math inline">\(m,n\)</span>-dimensional rectangular arrays, called matrices. Here, <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> refer to the number of rows and columns of the matrix, respectively. A matrix with two rows and three columns, a <span class="math inline">\(2 \times 3\)</span> matrix, is represented as follows <span class="math display">\[A = \begin{bmatrix} a_{1,1} &amp; a_{1,2} &amp; a_{1,3} \\  a_{2,1} &amp; a_{2,2} &amp; a_{2,3} \end{bmatrix}.\]</span> Operations can also be performend on matrices. In fact, the operations on scalars (or <span class="math inline">\(1 \times 1\)</span> matrices or numbers) are a special case of the respective matrix operations. Today, we will look at three different matrix operations: addition, and two types of multiplication, the dot-product and the matrix product.</p>
+<p>In turn, <span class="math inline">\(n\)</span>-dimensional vectors are a special case of <span class="math inline">\(m,n\)</span>-dimensional rectangular arrays, called matrices. Here, <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> refer to the number of rows and columns of the matrix, respectively. A matrix with two rows and three columns, a <span class="math inline">\(2 \times 3\)</span> matrix, is represented as follows <span class="math display">\[ \begin{bmatrix} a_{1,1} &amp; a_{1,2} &amp; a_{1,3} \\  a_{2,1} &amp; a_{2,2} &amp; a_{2,3} \end{bmatrix}.\]</span> Operations can also be performend on matrices. In fact, the operations on scalars (or <span class="math inline">\(1 \times 1\)</span> matrices or numbers) are a special case of the respective matrix operations. Today, we will look at three different matrix operations: addition, and two types of multiplication, the dot-product and the matrix product.</p>
 <p>Addition is one of the simplest matrix operations, as it basically is element-wise scalar addition <span class="math display">\[\begin{bmatrix} a_{1,1} &amp; a_{1,2} &amp; a_{1,3} \\  a_{2,1} &amp; a_{2,2} &amp; a_{2,3} \end{bmatrix} + \begin{bmatrix} b_{1,1} &amp; b_{1,2} &amp; b_{1,3} \\  b_{2,1} &amp; b_{2,2} &amp; b_{2,3} \end{bmatrix} = \begin{bmatrix} a_{1,1} + b_{1,1}&amp; a_{1,2} + b_{1,2} &amp; a_{1,3} + b_{1,3} \\  a_{2,1} + b_{2,1} &amp; a_{2,2} + b_{2,2} &amp; a_{2,3} + b_{2,3} \end{bmatrix}.\]</span></p>
-<p>Matrix multiplication is a bit more difficult, not least because there are multiple ways to multiply matrices. The dot-product, just like matrix addition, is element-wise scalar multiplication <span class="math display">\[\begin{bmatrix} a_{1,1} &amp; a_{1,2} &amp; a_{1,3} \\  a_{2,1} &amp; a_{2,2} &amp; a_{2,3} \end{bmatrix} \bullet \begin{bmatrix} b_{1,1} &amp; b_{1,2} &amp; b_{1,3} \\  b_{2,1} &amp; b_{2,2} &amp; b_{2,3} \end{bmatrix} = \begin{bmatrix} a_{1,1} b_{1,1}&amp; a_{1,2} b_{1,2} &amp; a_{1,3} b_{1,3} \\  a_{2,1} b_{2,1} &amp; a_{2,2} b_{2,2} &amp; a_{2,3} b_{2,3} \end{bmatrix}.\]</span> The matrix product is something that we are unfamiliar with in the ‘scalar world’.</p>
-<!-- Operations on these matrices are once again a more general case of the before mentioned scalar and vector operations. These operations are complemented with a number of additional operations. The one we are interested in is called the matrix product. This operation behaves a little different than, for example, scalar and vector additition or multiplication, as it takes two matrices that are not restricted to be of similar dimensions. However, the dimensions should be compatible, which means that the columns of the left and the rows of the right matrix in the multiplication should be equal. Or in mathematical notation: for matrices $m \times n$ and $p \times q$ to be compatible $n=p$ should hold. The result of the mentioned matrix product would be a matrix with the number of rows of the left and the number of columns of the right matrix, that means $m \times q$. -->
+<p>Matrix multiplication is a bit more difficult, not least because there are multiple ways to multiply matrices. The dot-product, just like matrix addition, is element-wise scalar multiplication <span class="math display">\[\begin{bmatrix} a_{1,1} &amp; a_{1,2} &amp; a_{1,3} \\  a_{2,1} &amp; a_{2,2} &amp; a_{2,3} \end{bmatrix} \bullet \begin{bmatrix} b_{1,1} &amp; b_{1,2} &amp; b_{1,3} \\  b_{2,1} &amp; b_{2,2} &amp; b_{2,3} \end{bmatrix} = \begin{bmatrix} a_{1,1} b_{1,1}&amp; a_{1,2} b_{1,2} &amp; a_{1,3} b_{1,3} \\  a_{2,1} b_{2,1} &amp; a_{2,2} b_{2,2} &amp; a_{2,3} b_{2,3} \end{bmatrix}.\]</span> The matrix product is something that we are unfamiliar with in the ‘scalar world’. The previous operations both needed two matrices with equal dimensions and returned one matrix with the same dimension. The matrix product is quite different:</p>
+<ul>
+<li>Order is important; matrix <span class="math inline">\(A\)</span> multiplied with matrix <span class="math inline">\(B\)</span> is not necessarily equal to matrix <span class="math inline">\(B\)</span> multiplied with matrix <span class="math inline">\(A\)</span>.<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></li>
+<li>Dimensions should be compatible; matrix <span class="math inline">\(A\)</span> and matrix <span class="math inline">\(B\)</span> can only be multiplied when the number of columns of the first and the number of rows of the second matrix are equal.</li>
+<li>Order is (even more) important; the result of a matrix multiplication is a matrix with the number of rows of the first and the number of columns of the second matrix.</li>
+</ul>
+<p>A <span class="math inline">\(2 \times 3\)</span> matrix multiplied with a <span class="math inline">\(3 \times 2\)</span> matrix has output</p>
+<p><span class="math display">\[\begin{bmatrix} a_{1,1} &amp; a_{1,2} &amp; a_{1,3} \\  a_{2,1} &amp; a_{2,2} &amp; a_{2,3} \end{bmatrix} \times \begin{bmatrix} b_{1,1} &amp; b_{1,2} \\  b_{2,1} &amp; b_{2,2} \\ b_{3,1} &amp; b_{3,2} \end{bmatrix} = \\ 
+\begin{bmatrix} a_{1,1}b_{1,1} + a_{1,2}b_{1,2} + a_{1,3}b_{1,3} &amp; a_{1,1}b_{1,2} + a_{1,2}b_{2,2} + a_{1,3}b_{3,2} \\ a_{2,1}b_{1,1} + a_{2,2}b_{1,2} + a_{2,3}b_{1,3} &amp; a_{2,1}b_{1,2} + a_{2,2}b_{2,2} + a_{2,3}b_{3,2}  \end{bmatrix},\]</span> and a <span class="math inline">\(3 \times 2\)</span> matrix multiplied with a <span class="math inline">\(2 \times 3\)</span> matrix has output <span class="math display">\[\begin{bmatrix} b_{1,1} &amp; b_{1,2} \\  b_{2,1} &amp; b_{2,2} \\ b_{3,1} &amp; b_{3,2} \end{bmatrix} \times \begin{bmatrix} a_{1,1} &amp; a_{1,2} &amp; a_{1,3} \\  a_{2,1} &amp; a_{2,2} &amp; a_{2,3} \end{bmatrix} = \\ 
+\begin{bmatrix} b_{1,1}a_{1,1} + b_{1,2}a_{2,1} &amp; b_{1,1}a_{1,2} + b_{1,2}a_{1,3}\\ 
+b_{2,1}a_{1,1} + b_{2,2}a_{2,1} &amp; b_{2,1}a_{1,2} + b_{2,2}a_{1,3}\\
+b_{3,1}a_{1,1} + b_{3,2}a_{2,1} &amp; b_{3,1}a_{1,2} + b_{3,2}a_{1,3}\\ \end{bmatrix}.\]</span></p>
+<p>So, we conclude that the beautiful thing about matrices is that they nest vectors and scalars as special cases, which means that every model that is based on matrices will also apply to vectors and scalars, which is not necessarily true the other way around.</p>
 </div>
 </div>
+<div id="vectorization-in-r" class="section level4">
+<h4>Vectorization in R</h4>
+<p>But why are we going into so much detail on advanced mathematics and vectorization when talking about R? Well, if you have ever used nested for loops before, then you know how much computation time and power they require. This can be solved by replacing the relatively slow loops by vectorized methods, which use the highly optimized built in matrix operations. Below I will give some examples.</p>
+<p><strong>EXAMPLE 1.</strong> We want to compute the mean between two data series over time.</p>
+<pre class="r"><code># Set the random seed for reproducability
+set.seed(1)
+
+# Initialize the data
+n &lt;- 10000
+num_series &lt;- 2
+data &lt;- data.frame(matrix(runif(n*num_series),ncol=num_series))
+
+# Possibility 1: for loop
+system.time(for (t in 1:n) {
+    data$mean[t] &lt;- mean(as.numeric(data[t,1:num_series]))
+})
+##    user  system elapsed 
+##   1.732   0.202   7.786 
+
+# Possibility 2: vectorization
+system.time(data$mean2 &lt;- rowMeans(data))
+##    user  system elapsed 
+##   0.000   0.000   0.001</code></pre>
+<p>This example shows how powerful refactoring your code to use vectorized methods is, there is a speed improvement of over <span class="math inline">\(5000\)</span> times! What would happen to the performance of both methods when we increase the number of data points?</p>
+<pre class="r"><code># Initialize the data
+n &lt;- 50000
+num_series &lt;- 2
+data &lt;- data.frame(matrix(runif(n*num_series),ncol=num_series))
+
+# Possibility 1: for loop
+system.time(for (t in 1:n) {
+    data$mean[t] &lt;- mean(as.numeric(data[t,1:num_series]))
+})
+##    user  system elapsed 
+##  17.719   1.861  19.781 
+
+# Possibility 2: vectorization
+system.time(data$mean2 &lt;- rowMeans(data))
+##    user  system elapsed 
+##   0.002   0.001   0.003 </code></pre>
+<p>Thus, the for loop based approach already takes considerable amount of time to complete, whereas the vectorized approach still finishes in an instant. This means, that if we were using the for loop based appraoch, that we would really be in trouble if the data points were to increase once more.</p>
+<p><strong>EXAMPLE 2.</strong> We are interested in the total value of our investment portfolio <span class="math inline">\(p\)</span>, which consists of <span class="math inline">\(n\)</span> different financial instruments, over a number of years. This can be done by multiplying the price of each financial instrument <span class="math inline">\(i\)</span> at time <span class="math inline">\(t\)</span> with the volume of financial instrument <span class="math inline">\(i\)</span> at time <span class="math inline">\(t\)</span> and taking the total sum.</p>
+<pre class="r"><code># Set the random seed for reproducability
+set.seed(1)
+# Initialize the prices and volumes
+num_years &lt;- 10
+num_items &lt;- 2
+prices &lt;- data.frame(matrix(runif(num_years*num_items)+5, nrow=num_years))
+volume &lt;- data.frame(matrix(runif(num_years*num_items), nrow=num_years))
+
+# Possibility 1: for loop
+value_portfolio &lt;- 0
+for (i in 1:num_items){
+  value_item &lt;- 0
+  for (t in 1:num_years){
+    value_item &lt;- value_item + prices[t,i]*volume[t,i]
+  }
+  value_portfolio &lt;- value_portfolio + value_item
+}
+## [1] 52.29415
+
+# Possibility 2: vectorization
+value_portfolio &lt;- sum(prices*volume)
+## [1] 52.29415</code></pre>
+<p>If, some time later, we suddenly wish to compute the portfolio value for each individual year, instead of the total portvolio value, then we could change the code as follows</p>
+<pre class="r"><code># Possibility 1: for loop
+value_portfolio &lt;- data.frame(value=matrix(0, row=num_years,ncol=1))
+for (t in 1:num_years){
+  value_items &lt;- 0
+  for (i in 1:num_item){
+    value_items &lt;- value_items + prices[t,i]*volume[t,i]
+  }
+  value_portfolio[t,1] &lt;- value_items
+}
+## [1] 7.431395 4.243342 ... 8.789179 4.098889
+
+# Possibility 2: vectorization
+value_portfolio &lt;- rowSums(prices*volume)
+## [1] 7.431395 4.243342 ... 8.789179 4.098889 </code></pre>
+<p>It should now be clear that vectorization not only improves the performance, but that it also improves readability, makes code less error prone (can you spot them?), and more flexible.</p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>They are only equal when both matrices are square (number of rows and columns are equal), or in the trivial case (when both matrices are scalars)<a href="#fnref1">↩</a></p></li>
+</ol>
 </div>

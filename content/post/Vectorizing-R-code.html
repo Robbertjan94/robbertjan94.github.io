@@ -15,7 +15,7 @@ tags: [vectorization, refactoring, linear algebra]
 
 <div id="the-beginning" class="section level3">
 <h3>The beginning …</h3>
-<p>Somewhere last January I began my R adventure, which means that I have been programming with it for almost five months now. Prior to this period, my only experiences with R have been very frustrating, to say the least. These might have occurred while I was looking for the implementation of an obscure econometrical method or the one or two times that I tried to learn R and failed miserably. Me not being able to learn R at once is not that surprising, considering that R is a quirky language with a though learning curve. However, these things were not the only cause of my failures, what felt as the main cause was the difference between R and my previous programming language: <a href="https://nl.mathworks.com/?s_tid=gn_logo">MATLAB®</a>.</p>
+<p>Somewhere last January I began my R journey, which means that I have been programming with it for almost five months now. Prior to this period, my only experiences with R have been very frustrating, to say the least. These might have occurred while I was looking for the implementation of an obscure econometrical method or the one or two times that I tried to learn R and failed miserably. Me not being able to learn R at once is not that surprising, considering that R is a quirky language with a though learning curve. However, these things were not the only cause of my failures, what felt as the main cause was the difference between R and my previous programming language: <a href="https://nl.mathworks.com/?s_tid=gn_logo">MATLAB®</a>.</p>
 <p>Matlab is a matrix based language optimized for operations involving matrices and vectors. This means that it is possible to perform computations directly on whole vectors and matrices instead on scalars (numbers) alone. Hence, in MATLAB it is encouraged to, for example, avoid endless nested loops and instead use matrix based methods.</p>
 <p>The programming paradigm of MATLAB is therefore completely different from the R philosophy, that customarily dictates the use of the <a href="https://stackoverflow.com/a/7141669/8108484">apply</a> family that loops over individual data points. This has resulted in the somewhat unfortunate reputation that R is inherently <a href="http://fluff.info/blog/arch/00000172.htm">slow</a>. While there is some truth to this statement, because compiled languages are of course faster, the performance of R has improved a lot over the years. For example, by introducing built in functions (e.g. <code>rowSums</code>) that use matrix based methods and that have been written in low-level languages like C and Fortran.</p>
 </div>
@@ -23,10 +23,10 @@ tags: [vectorization, refactoring, linear algebra]
 <h3>Vectorization</h3>
 <p>The process of revising loop-based, scalar-oriented code to use matrix and vector operations is called <em>vectorization</em>. Vectorizing your code is worthwhile for several reasons:</p>
 <ul>
-<li>Appearance: Vectorized mathematical code appears more like the mathematical expressions found in textbooks, making the code easier to understand.</li>
-<li>Less Error Prone: Without loops, vectorized code is often shorter. Fewer lines of code mean fewer opportunities to introduce programming errors.</li>
-<li>Performance: Vectorized code often runs much faster than the corresponding code containing loops.</li>
-<li>Scalability: Matrix based methods are generic and therefore usually nest many different models.</li>
+<li>Appearance; vectorized mathematical code appears more like the mathematical expressions found in textbooks, making the code easier to understand.</li>
+<li>Less Error Prone; without loops, vectorized code is often shorter. Fewer lines of code mean fewer opportunities to introduce programming errors.</li>
+<li>Performance; vectorized code often runs much faster than the corresponding code containing loops.</li>
+<li>Scalability; matrix based methods are generic and therefore usually nest many different models.</li>
 </ul>
 <div id="mathematics-behind-vectorization" class="section level4">
 <h4>Mathematics behind vectorization</h4>
@@ -41,9 +41,9 @@ tags: [vectorization, refactoring, linear algebra]
 <p>Addition is one of the simplest matrix operations, as it basically is element-wise scalar addition <span class="math display">\[\begin{bmatrix} a_{1,1} &amp; a_{1,2} &amp; a_{1,3} \\  a_{2,1} &amp; a_{2,2} &amp; a_{2,3} \end{bmatrix} + \begin{bmatrix} b_{1,1} &amp; b_{1,2} &amp; b_{1,3} \\  b_{2,1} &amp; b_{2,2} &amp; b_{2,3} \end{bmatrix} = \begin{bmatrix} a_{1,1} + b_{1,1}&amp; a_{1,2} + b_{1,2} &amp; a_{1,3} + b_{1,3} \\  a_{2,1} + b_{2,1} &amp; a_{2,2} + b_{2,2} &amp; a_{2,3} + b_{2,3} \end{bmatrix}.\]</span></p>
 <p>Matrix multiplication is a bit more difficult, not least because there are multiple ways to multiply matrices. The dot-product, just like matrix addition, is element-wise scalar multiplication <span class="math display">\[\begin{bmatrix} a_{1,1} &amp; a_{1,2} &amp; a_{1,3} \\  a_{2,1} &amp; a_{2,2} &amp; a_{2,3} \end{bmatrix} \bullet \begin{bmatrix} b_{1,1} &amp; b_{1,2} &amp; b_{1,3} \\  b_{2,1} &amp; b_{2,2} &amp; b_{2,3} \end{bmatrix} = \begin{bmatrix} a_{1,1} b_{1,1}&amp; a_{1,2} b_{1,2} &amp; a_{1,3} b_{1,3} \\  a_{2,1} b_{2,1} &amp; a_{2,2} b_{2,2} &amp; a_{2,3} b_{2,3} \end{bmatrix}.\]</span> The matrix product is something that we are unfamiliar with in the ‘scalar world’. The previous operations both needed two matrices with equal dimensions and returned one matrix with the same dimension. The matrix product is quite different:</p>
 <ul>
-<li>Order is important; matrix <span class="math inline">\(A\)</span> multiplied with matrix <span class="math inline">\(B\)</span> is not necessarily equal to matrix <span class="math inline">\(B\)</span> multiplied with matrix <span class="math inline">\(A\)</span>.<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></li>
-<li>Dimensions should be compatible; matrix <span class="math inline">\(A\)</span> and matrix <span class="math inline">\(B\)</span> can only be multiplied when the number of columns of the first and the number of rows of the second matrix are equal.</li>
-<li>Order is (even more) important; the result of a matrix multiplication is a matrix with the number of rows of the first and the number of columns of the second matrix.</li>
+<li>Importance of order; matrix <span class="math inline">\(A\)</span> multiplied with matrix <span class="math inline">\(B\)</span> is not necessarily equal to matrix <span class="math inline">\(B\)</span> multiplied with matrix <span class="math inline">\(A\)</span>.<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></li>
+<li>Compatibility of dimensions; matrix <span class="math inline">\(A\)</span> and matrix <span class="math inline">\(B\)</span> can only be multiplied when the number of columns of the first and the number of rows of the second matrix are equal.</li>
+<li>(Even higher) importance of order; the result of a matrix multiplication is a matrix with the number of rows of the first and the number of columns of the second matrix.</li>
 </ul>
 <p>A <span class="math inline">\(2 \times 3\)</span> matrix multiplied with a <span class="math inline">\(3 \times 2\)</span> matrix has output</p>
 <p><span class="math display">\[\begin{bmatrix} a_{1,1} &amp; a_{1,2} &amp; a_{1,3} \\  a_{2,1} &amp; a_{2,2} &amp; a_{2,3} \end{bmatrix} \times \begin{bmatrix} b_{1,1} &amp; b_{1,2} \\  b_{2,1} &amp; b_{2,2} \\ b_{3,1} &amp; b_{3,2} \end{bmatrix} = \\ 
@@ -58,7 +58,7 @@ b_{3,1}a_{1,1} + b_{3,2}a_{2,1} &amp; b_{3,1}a_{1,2} + b_{3,2}a_{1,3}\\ \end{bma
 <h4>Vectorization in R</h4>
 <p>But why are we going into so much detail on advanced mathematics and vectorization when talking about R? Well, if you have ever used nested for loops before, then you know how much computation time and power they require. This can be solved by replacing the relatively slow loops by vectorized methods, which use the highly optimized built in matrix operations. Below I will give some examples.</p>
 <p><strong>EXAMPLE 1.</strong> We want to compute the mean between two data series over time.</p>
-<pre class="r"><code># Set the random seed for reproducability
+<pre class="r"><code># Set the random seed for reproducibility
 set.seed(1)
 
 # Initialize the data
@@ -66,14 +66,14 @@ n &lt;- 10000
 num_series &lt;- 2
 data &lt;- data.frame(matrix(runif(n*num_series),ncol=num_series))
 
-# Possibility 1: for loop
+# Approach 1: for loop
 system.time(for (t in 1:n) {
     data$mean[t] &lt;- mean(as.numeric(data[t,1:num_series]))
 })
 ##    user  system elapsed 
 ##   1.732   0.202   7.786 
 
-# Possibility 2: vectorization
+# Approach 2: vectorization
 system.time(data$mean2 &lt;- rowMeans(data))
 ##    user  system elapsed 
 ##   0.000   0.000   0.001</code></pre>
@@ -83,20 +83,20 @@ n &lt;- 50000
 num_series &lt;- 2
 data &lt;- data.frame(matrix(runif(n*num_series),ncol=num_series))
 
-# Possibility 1: for loop
+# Approach 1: for loop
 system.time(for (t in 1:n) {
     data$mean[t] &lt;- mean(as.numeric(data[t,1:num_series]))
 })
 ##    user  system elapsed 
 ##  17.719   1.861  19.781 
 
-# Possibility 2: vectorization
+# Approach 2: vectorization
 system.time(data$mean2 &lt;- rowMeans(data))
 ##    user  system elapsed 
 ##   0.002   0.001   0.003 </code></pre>
-<p>Thus, the for loop based approach already takes considerable amount of time to complete, whereas the vectorized approach still finishes in an instant. This means, that if we were using the for loop based appraoch, that we would really be in trouble if the data points were to increase once more.</p>
+<p>Thus, the for loop based approach already takes considerable amount of time to complete, whereas the vectorized approach still finishes in an instant. This means, that if we were using the for loop based approach, that we would really be in trouble if the number of data points were to increase even more.</p>
 <p><strong>EXAMPLE 2.</strong> We are interested in the total value of our investment portfolio <span class="math inline">\(p\)</span>, which consists of <span class="math inline">\(n\)</span> different financial instruments, over a number of years. This can be done by multiplying the price of each financial instrument <span class="math inline">\(i\)</span> at time <span class="math inline">\(t\)</span> with the volume of financial instrument <span class="math inline">\(i\)</span> at time <span class="math inline">\(t\)</span> and taking the total sum.</p>
-<pre class="r"><code># Set the random seed for reproducability
+<pre class="r"><code># Set the random seed for reproducibility
 set.seed(1)
 # Initialize the prices and volumes
 num_years &lt;- 10
@@ -104,7 +104,7 @@ num_items &lt;- 2
 prices &lt;- data.frame(matrix(runif(num_years*num_items)+5, nrow=num_years))
 volume &lt;- data.frame(matrix(runif(num_years*num_items), nrow=num_years))
 
-# Possibility 1: for loop
+# Approach 1: for loop
 value_portfolio &lt;- 0
 for (i in 1:num_items){
   value_item &lt;- 0
@@ -115,11 +115,11 @@ for (i in 1:num_items){
 }
 ## [1] 52.29415
 
-# Possibility 2: vectorization
+# Approach 2: vectorization
 value_portfolio &lt;- sum(prices*volume)
 ## [1] 52.29415</code></pre>
 <p>If, some time later, we suddenly wish to compute the portfolio value for each individual year, instead of the total portvolio value, then we could change the code as follows</p>
-<pre class="r"><code># Possibility 1: for loop
+<pre class="r"><code># Approach 1: for loop
 value_portfolio &lt;- data.frame(value=matrix(0, row=num_years,ncol=1))
 for (t in 1:num_years){
   value_items &lt;- 0
@@ -130,11 +130,28 @@ for (t in 1:num_years){
 }
 ## [1] 7.431395 4.243342 ... 8.789179 4.098889
 
-# Possibility 2: vectorization
+# Approach 2: vectorization
 value_portfolio &lt;- rowSums(prices*volume)
 ## [1] 7.431395 4.243342 ... 8.789179 4.098889 </code></pre>
-<p>It should now be clear that vectorization not only improves the performance, but that it also improves readability, makes code less error prone (can you spot them?), and more flexible.</p>
+<p>It should now be clear that vectorization not only improves performance, but that it also improves readability, makes code less error prone (can you spot them?), and more flexible.</p>
+<p><strong>EXAMPLE 3.</strong></p>
 </div>
+</div>
+<div id="other-ways-to-improve-your-code" class="section level3">
+<h3>Other ways to improve your code</h3>
+<p>Of course, vectorization is not the only way to improve your code in R. There is a host of other things that can be done:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Parallel_computing">Parallelization</a>; Parallel computing is a type of computation in which many calculations are carried out simultaneously. A requirement for parallel computing is that the calculations are independent. Those kind of calculations are usually referred to as ‘embarrassingly parallel’, because they unnecessarily take lots of time when processed sequentially.</li>
+<li><a href="http://www.rcpp.org/">Rcpp</a>; the most probable cause of slow code in R are huge numbers of nested for loops. This problem can be mitigated by implementing the loops directly in low-level programming languages like C or C++.</li>
+<li><a href="https://google.github.io/styleguide/Rguide.xml">Coding conventions</a>; One day, someone, heck it might even be you, will be looking at your code, that has been written months ago, and won’t be able to understand a thing. All because of a total lack of consistency and the brilliant idea to name every other variable something along the lines of ‘VAR-squared_Final.v3’. To improve the sharability and longevity of code, it is hence of utmost importance to adhere to, at least, some kind of coding conventions.
+<center>
+<blockquote>
+<p>“Good code is like a good joke, it needs no explanation”</p>
+</blockquote>
+</center></li>
+<li><span class="math inline">\(...\)</span></li>
+</ul>
+<p>I will cover these topics in more detail in later blog posts.</p>
 </div>
 <div class="footnotes">
 <hr />
